@@ -1,0 +1,28 @@
+.links-especialidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-especialidade {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid #00cad1;
+    margin: 0 10px 10px;
+    font-size: 18px;
+}
+
+.link-especialidade:hover {
+    color: #0d6e71;
+}
+
+.conteiner-links-especialidades {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.conteiner-links-especialidades h1 {
+    margin: 20px 0;
+}

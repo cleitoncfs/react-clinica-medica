@@ -1,0 +1,176 @@
+/* Importar a fonte */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+/* Reset e estilos globais */
+* {
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+main {
+    color: #0000008c;
+    margin-bottom: 60px;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.container-titulo {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-titulo h2,
+.container-titulo h3 {
+    margin: 0;
+}
+
+/* Estilo para o botão "Voltar ao Topo" */
+#btn-voltar-topo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #00cad1;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btn-voltar-topo:hover {
+    background-color: #004b4c;
+    transform: scale(1.1);
+}
+
+#btn-voltar-topo::after {
+    content: attr(title);
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 101;
+}
+
+#btn-voltar-topo:hover::after {
+    display: block;
+    left: auto;
+    right: 0;
+    transform: translateX(-20%);
+}
+
+#btn-voltar-topo:hover::after {
+    display: block;
+}
+
+/* Estilos para seções com âncoras */
+.section-with-anchor {
+    padding: 40px 20px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6; /* Ideal para textos longos */
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2; /* Mais compacto para títulos */
+}
+
+.container-titulo p {
+    line-height: 1.5; /* Intermediário para textos introdutórios */
+}
+
+/* Para as tabelas de horários */
+.tabela-especialistas td {
+    line-height: 1.4;
+    padding: 8px 10px;
+}
+
+/* Sistema de espaçamento vertical entre seções */
+:root {
+    --section-padding: 2rem; /* Base de 56px */
+}
+
+/* Espaçamento principal entre seções */
+section {
+    padding: var(--section-padding) 0;
+    position: relative;
+}
+
+/* Modificadores para casos específicos */
+.section-tight {
+    padding: calc(var(--section-padding) * 0.75) 0;
+}
+
+.section-loose {
+    padding: calc(var(--section-padding) * 1.5) 0;
+}
+
+.section-xl {
+    padding: calc(var(--section-padding) * 2) 0;
+}
+
+/* Seção hero (primeira seção) */
+.section-hero {
+    padding-top: calc(var(--section-padding) * 1.5);
+    padding-bottom: calc(var(--section-padding) * 1.5);
+}
+
+/* Seção de contato (última seção) */
+.section-contact {
+    padding-bottom: calc(var(--section-padding) * 1.5);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    :root {
+        --section-padding: 3rem; /* 48px */
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 2.5rem; /* 40px */
+    }
+
+    .section-hero {
+        padding-top: var(--section-padding);
+        padding-bottom: var(--section-padding);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 2rem; /* 32px */
+    }
+
+    .section-tight {
+        padding: var(--section-padding) 0;
+    }
+}

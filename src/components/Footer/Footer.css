@@ -1,0 +1,147 @@
+/* Estilos Gerais do Footer */
+.site-footer {
+    background-color: #0d6e71;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Logo */
+.footer-logo-img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+/* Contatos */
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.footer-icon {
+    font-size: 1.1rem;
+    color: #00cad1;
+}
+
+.footer-highlight {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Textos Legais */
+.footer-legal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-copyright {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-credits {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Link do Desenvolvedor */
+.footer-link {
+    color: #00cad1;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    background-color: rgba(0, 202, 209, 0.1);
+    text-decoration: none;
+}
+
+.link-text {
+    position: relative;
+}
+
+.link-text::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #00cad1;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover .link-text::after {
+    width: 100%;
+}
+
+.link-icon {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        gap: 20px;
+    }
+
+    .footer-contacts {
+        gap: 10px;
+    }
+
+    .footer-contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+/* Opção com círculo verde de fundo */
+.whatsapp-icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.whatsapp-icon {
+    color: white;
+    font-size: 14px;
+}

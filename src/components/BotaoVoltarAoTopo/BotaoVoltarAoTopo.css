@@ -1,0 +1,113 @@
+/* Estilos base do botão */
+.botao-container {
+    position: relative;
+}
+
+.botao-voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00cad1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.botao-voltar-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.botao-voltar-topo:hover {
+    background-color: #009fa5;
+    transform: scale(1.1);
+}
+
+.icone-seta {
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.botao-voltar-topo:hover .icone-seta {
+    transform: translateY(-2px);
+}
+
+/* Estilos do tooltip personalizado */
+.custom-tooltip {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 1001;
+    animation: fadeIn 0.2s ease-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tooltip-arrow {
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #333;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efeito de onda ao clicar */
+@keyframes ripple {
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.botao-voltar-topo:focus::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: ripple 0.6s ease-out;
+}
+
+.tooltip-icon {
+    margin-right: 6px;
+    font-size: 14px;
+    vertical-align: middle;
+}
